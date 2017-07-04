@@ -17,4 +17,8 @@ app.controller("HomeController", ["$scope", "suggestions",
 		//after submit, clear input
 		$scope.title = "";
 	}
+	
+	$scope.upVote = function(post){
+		post.upvotes += 1;
+	}
 }]);

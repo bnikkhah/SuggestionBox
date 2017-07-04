@@ -9,10 +9,12 @@ body{
 .main-title{
 	color:#2c05f0;
 	border-bottom:1px solid #fff;
-	/*display:flex;
-	justify-text:center;
-	align-items:center;*/
 	text-align:center;
+}
+
+.main-title span{
+	font-size:2rem;
+	vertical-align:middle;
 }
 
 .main{
