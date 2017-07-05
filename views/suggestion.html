@@ -1,7 +1,8 @@
 <div class="main">
-	<ul ng-repeat="comment in post.comments">
-		<li>{{comment.body}}</li>
-	</ul>
+	<div class="comments" ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+		<h3>{{comment.body}}</h3>
+		<span class="glyphicon glyphicon-plus-sign" ng-click="upvoteComments(comment)"></span> Upvotes: {{comment.upvotes}}
+	</div>
 	<div class="add-comment">
 		<form ng-submit="addComment()" style="margin-top:50px">
 			<h3>Submit Your Comment</h3>
